@@ -22,7 +22,7 @@
               />
             </div>
             <a
-              class="md:hidden text-white rounded-full border px-4 py-2 hover:bg-[var(--color-orchidee-text)] transition-colors duration-300 cursor-pointer"
+              class="md:hidden text-white rounded-full border px-4 py-2 hover:bg-[#BC6686] hover:text-[#8A2254] transition-colors duration-300 cursor-pointer"
               href="#contact"
             >
               Jetzt Terminvereinbaren
@@ -54,7 +54,7 @@
             </div>
           </div>
 
-          <div
+          <!-- <div
             id="mobile-menu"
             class="hidden md:hidden bg-[var(--color-orchidee-bg)]/95 backdrop-blur-xl absolute top-[72px] left-0 w-full shadow-xl border-t border-white/20"
           >
@@ -86,7 +86,7 @@
                 >Kontakt</a
               >
             </div>
-          </div>
+          </div> -->
         </nav>
       </div>
 
@@ -223,6 +223,11 @@
           >
             Unser Service
           </h2>
+        </div>
+        <div class="flex justify-center items-center">
+          <h4 class="text-md text-[var(--color-orchidee-text)]/90 italic">
+            Gutscheine gibt es bei ins Vorort im Shop. Kommt vorbei!
+          </h4>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-6">
@@ -462,9 +467,7 @@
         toggleMenu();
       });
 
-      // Existing Image Modal Logic
       function openImage(src) {
-        // 1. Create Overlay
         const overlay = document.createElement('div');
         Object.assign(overlay.style, {
           position: 'fixed',
@@ -480,14 +483,14 @@
           cursor: 'zoom-out',
           opacity: '0',
           transition: 'opacity 0.3s ease',
-          padding: '20px', // Added padding for mobile safety
+          padding: '20px',
+          height: '100vh',
         });
 
-        // 2. Create Image Container
         const fullImg = document.createElement('img');
         fullImg.src = src;
         Object.assign(fullImg.style, {
-          maxWidth: '100%', // Changed to 100% for mobile
+          maxWidth: '100%',
           maxHeight: '90%',
           borderRadius: '8px',
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
@@ -495,10 +498,9 @@
           transition: 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
           cursor: 'default',
           border: '2px solid rgba(255, 255, 255, 0.1)',
-          objectFit: 'contain', // Ensures image doesn't stretch
+          objectFit: 'contain',
         });
 
-        // 3. Close Button
         const closeBtn = document.createElement('div');
         closeBtn.innerHTML = '×';
         Object.assign(closeBtn.style, {
@@ -510,8 +512,8 @@
           fontWeight: '200',
           cursor: 'pointer',
           fontFamily: 'sans-serif',
-          zIndex: '10001', // Ensure it's above image
-          background: 'rgba(0,0,0,0.5)', // Background for visibility on light images
+          zIndex: '10001',
+          background: 'rgba(0,0,0,0.5)',
           width: '40px',
           height: '40px',
           display: 'flex',
@@ -540,7 +542,7 @@
         };
 
         overlay.onclick = closeModal;
-        closeBtn.onclick = closeModal; // Ensure clicking X works
+        closeBtn.onclick = closeModal;
         fullImg.onclick = (e) => e.stopPropagation();
       }
     </script>

@@ -23,19 +23,18 @@ body {
 
 .navbarlink > a {
   transition: all 0.2s ease-in-out;
+  font-weight: bold;
   display: inline-block;
 }
 
 .navbarlink > a:hover {
   color: rgb(141, 35, 82, 0.75);
-  font-weight: bold;
-  /* Reduced padding shift to prevent layout jumps on mobile menu */
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .priceCard {
-  display: flex; /* Changed to flex column to ensure content stretches */
+  display: flex;
   flex-direction: column;
   border-radius: 1rem;
   padding: 1.5rem;
@@ -79,7 +78,7 @@ body {
 .priceCard > div {
   display: flex;
   flex-direction: column;
-  row-gap: 1rem; /* Standardized spacing */
+  row-gap: 1rem;
   margin-top: 0.5rem;
   width: 100%;
 }
@@ -87,7 +86,7 @@ body {
 .priceCard > div > div {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Align items vertically center */
+  align-items: center;
   width: 100%;
 }
 
@@ -121,7 +120,7 @@ body {
   font-weight: 600;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   text-align: center;
-  min-width: 60px; /* Increased slightly for readability */
+  min-width: 60px;
 }
 
 /* Updated space-border to be more robust on resizing */
@@ -133,5 +132,5 @@ body {
   margin: 0 0.75rem;
   opacity: 0.6;
   width: auto;
-  min-width: 10px; /* Prevents it from disappearing completely */
+  min-width: 10px;
 }
