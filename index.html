@@ -10,64 +10,118 @@
   <body>
     <section id="home">
       <div class="absolute w-full bg-[#ffffff0d] backdrop-blur-[6px] z-50">
-        <nav class="flex justify-center shadow-lg h-[72px]">
+        <nav class="container mx-auto px-4">
           <div
-            class="flex justify-center items-center text-white space-x-12 [&>*>a]:text-xl"
+            class="flex justify-between md:justify-center items-center h-[72px]"
           >
-            <div class="navbarlink">
-              <a href="#about" class="">Über uns</a>
-            </div>
-            <div class="navbarlink">
-              <a href="#qualification" class="">Qualifikation & Kompetenz</a>
-            </div>
-            <div class="flex items-center justify-center rounded-full">
+            <div class="md:hidden">
               <img
-                class="translate-y-8"
+                class="w-[115px] lg:w-[250px]"
                 src="./images/logo-orchidee-thai-massage.png"
                 alt="Orchidee Thai Massage Logo"
-                width="250"
-                height="72"
               />
             </div>
-            <div class="navbarlink">
-              <a href="#service">Unser Service</a>
-            </div>
+            <a
+              class="md:hidden text-white rounded-full border px-4 py-2 hover:bg-[var(--color-orchidee-text)] transition-colors duration-300 cursor-pointer"
+              href="#contact"
+            >
+              Jetzt Terminvereinbaren
+            </a>
+            <div
+              class="hidden md:flex justify-center items-center text-white space-x-6 lg:space-x-12 [&>*>a]:text-lg lg:[&>*>a]:text-xl"
+            >
+              <div class="navbarlink">
+                <a href="#about">Über uns</a>
+              </div>
+              <div class="navbarlink">
+                <a href="#qualification">Qualifikation</a>
+              </div>
 
-            <div class="navbarlink">
-              <a href="#contact" class="">Kontakt</a>
+              <div class="flex items-center justify-center rounded-full px-4">
+                <img
+                  class="translate-y-8 w-[180px] lg:w-[250px]"
+                  src="./images/logo-orchidee-thai-massage.png"
+                  alt="Orchidee Thai Massage Logo"
+                />
+              </div>
+
+              <div class="navbarlink">
+                <a href="#service">Unser Service</a>
+              </div>
+              <div class="navbarlink">
+                <a href="#contact">Kontakt</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="mobile-menu"
+            class="hidden md:hidden bg-[var(--color-orchidee-bg)]/95 backdrop-blur-xl absolute top-[72px] left-0 w-full shadow-xl border-t border-white/20"
+          >
+            <div
+              class="flex flex-col items-center py-8 space-y-6 text-[var(--color-orchidee-text)] font-bold text-xl"
+            >
+              <a
+                href="#about"
+                class="hover:text-[var(--color-orchidee)]"
+                onclick="toggleMenu()"
+                >Über uns</a
+              >
+              <a
+                href="#qualification"
+                class="hover:text-[var(--color-orchidee)]"
+                onclick="toggleMenu()"
+                >Qualifikation</a
+              >
+              <a
+                href="#service"
+                class="hover:text-[var(--color-orchidee)]"
+                onclick="toggleMenu()"
+                >Unser Service</a
+              >
+              <a
+                href="#contact"
+                class="hover:text-[var(--color-orchidee)]"
+                onclick="toggleMenu()"
+                >Kontakt</a
+              >
             </div>
           </div>
         </nav>
       </div>
-      <div class="landing-page-bg">
+
+      <div class="landing-page-bg relative">
         <img
-          class="w-full h-screen object-cover"
+          class="w-full h-[60vh] md:h-screen object-cover"
           src="./images/massage.jpg"
           alt="Massage Image"
         />
       </div>
     </section>
+
     <div
-      class="flex flex-col gap-32 px-6 py-20 bg-[var(--color-orchidee-bg)]/55"
+      class="flex flex-col gap-16 md:gap-32 px-4 md:px-6 py-12 md:py-20 bg-[var(--color-orchidee-bg)]/55"
     >
       <section id="about">
-        <div class="grid gap-10">
+        <div class="grid gap-6 md:gap-10 max-w-7xl md:max-w-max mx-auto">
           <h2
-            class="block text-9xl font-bold text-[var(--color-orchidee-text)] uppercase"
+            class="block text-5xl md:text-7xl lg:text-9xl font-bold text-[var(--color-orchidee-text)] uppercase leading-tight"
           >
-            <span class="w-full"> Traditionelle<br /> </span>
-            <span class="w-full"> Thai<br /> </span>
-            <span class="flex w-full">
-              <span class=""> Massage </span>
-              <span class="text-2xl mt-4 ml-6"
-                >Harmonie für Körper und Geist
+            <span class="block w-full">Traditionelle</span>
+            <span class="block w-full">Thai</span>
+            <span class="flex flex-wrap w-full items-baseline">
+              <span>Massage</span>
+              <span
+                class="text-xl md:text-2xl mt-2 md:mt-4 ml-1 md:ml-6 block md:inline w-full md:w-auto font-medium normal-case tracking-normal"
+              >
+                Harmonie für Körper und Geist
               </span>
             </span>
           </h2>
           <p
-            class="text-2xl text-[var(--color-orchidee-text)]/80 text-justify leading-9 my-4"
+            class="text-lg md:text-2xl text-[var(--color-orchidee-text)]/80 text-justify leading-relaxed md:leading-9 my-4"
           >
-            Unsere traditionelle Thai-Massage ist mehr als nur Entspannung - sie
+            Unsere traditionelle Thai-Massage ist mehr als nur Entspannung – sie
             ist eine tiefgreifende, ganzheitliche Behandlung, die Körper und
             Geist wieder in Balance bringt. Mit gezieltem Druck, sanften
             Dehnungen und fließenden Bewegungen werden Verspannungen gelöst,
@@ -78,17 +132,18 @@
             Klarheit und tiefes Wohlbefinden.
           </p>
           <h4
-            class="font-bold text-center text-2xl text-[var(--color-orchidee-text)]"
+            class="font-bold text-center text-lg md:text-2xl text-[var(--color-orchidee-text)] mt-4"
           >
             Lernen Sie die wohltuende Wirkung selbst kennen – und schenken Sie
             sich eine Auszeit, die bleibt.
           </h4>
         </div>
       </section>
+
       <section id="qualification">
-        <div class="flex justify-center items-center mb-12">
+        <div class="flex justify-center items-center mb-8 md:mb-12">
           <h2
-            class="text-4xl font-bold text-[var(--color-orchidee-text)] text-center text-shadow-lg border-b-2 border-[var(--color-orchidee)]/30 pb-4 inline-block"
+            class="text-3xl md:text-4xl font-bold text-[var(--color-orchidee-text)] text-center text-shadow-lg border-b-2 border-[var(--color-orchidee)]/30 pb-4 inline-block"
           >
             Qualifikation & Kompetenz
           </h2>
@@ -160,16 +215,17 @@
           </div>
         </div>
       </section>
+
       <section id="service">
         <div class="flex justify-center items-center">
           <h2
-            class="text-4xl font-bold text-[var(--color-orchidee-text)] text-shadow-lg border-b border-[var(--color-orchidee)]/50 mb-10 px-4 pb-3"
+            class="text-3xl md:text-4xl font-bold text-[var(--color-orchidee-text)] text-shadow-lg border-b border-[var(--color-orchidee)]/50 mb-6 md:mb-10 px-4 pb-3"
           >
             Unser Service
           </h2>
         </div>
 
-        <div class="grid grid-cols-4 gap-6 mt-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-6">
           <div class="priceCard">
             <h4>Klassische Thai Ganzkörper Massage</h4>
             <hr />
@@ -300,22 +356,23 @@
           </div>
         </div>
       </section>
+
       <section id="contact">
         <div class="flex justify-center items-center">
           <h2
-            class="text-4xl font-bold text-[var(--color-orchidee-text)] text-shadow-lg border-b border-[var(--color-orchidee)]/50 mb-10 px-4 pb-3"
+            class="text-3xl md:text-4xl font-bold text-[var(--color-orchidee-text)] text-shadow-lg border-b border-[var(--color-orchidee)]/50 mb-6 md:mb-10 px-4 pb-3"
           >
             Kontakt
           </h2>
         </div>
 
-        <div class="grid grid-cols-2 gap-6 mt-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 mt-6">
           <div class="grid grid-rows-2 gap-6">
             <div class="flex flex-col gap-4">
               <h4 class="text-2xl text-[var(--color-orchidee-text)] font-bold">
                 Öffnungszeiten
               </h4>
-              <div class="text-[var(--color-orchidee-text)]/100">
+              <div class="text-[var(--color-orchidee-text)]/100 text-lg">
                 <p class="whitespace-nowrap">
                   Montag - Freitag: <span class="numbers">09:00</span> -
                   <span class="numbers">18:00</span> Uhr
@@ -331,9 +388,14 @@
               <h4 class="text-2xl text-[var(--color-orchidee-text)] font-bold">
                 Kontakt
               </h4>
-              <div class="text-[var(--color-orchidee-text)]/100">
-                <p class="numbers whitespace-nowrap">
-                  Telefon: +49 176 24763942
+              <div class="text-[var(--color-orchidee-text)]/100 text-lg">
+                <p class="numbers whitespace-nowrap mb-3">
+                  <span class="numbers">39114</span> Magdeburg,<br />
+                  Simonstraße 11 <br />
+                  Telefon:
+                  <a href="tel:+4917624763942" class="underline"
+                    >+49 176 24763942</a
+                  >
                 </p>
                 <p class="font-bold">
                   Wir freuen uns auf Ihren Anruf zur Terminvereinbarung!
@@ -341,16 +403,16 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-6 h-full">
             <h4 class="text-2xl text-[var(--color-orchidee-text)] font-bold">
               Standort
             </h4>
-            <div class="flex h-full">
+            <div class="flex h-full min-h-[300px] w-full">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2431.234567890123!2d11.6276234!3d52.1205334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b7c1234567890%3A0xabcdef1234567890!2sSimonstrasse+11,+39114+Magdeburg!5e0!3m2!1sen!2sde!4v1697041234567!5m2!1sen!2sde"
                 width="100%"
                 height="100%"
-                class="rounded-2xl shadow-lg"
+                class="rounded-2xl shadow-lg w-full h-full"
                 allowfullscreen="true"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -360,26 +422,47 @@
         </div>
       </section>
     </div>
-    <footer class="text-center py-8 bg-[var(--color-orchidee-text)">
+
+    <footer
+      class="text-center py-8 bg-[var(--color-orchidee-text)]/5 border-t border-[var(--color-orchidee)]/10"
+    >
       <div class="container mx-auto">
-        <div class="flex justify-center space-x-6 text-sm text-gray-600">
+        <div
+          class="flex justify-center space-x-6 text-sm text-[var(--color-orchidee-text)]"
+        >
           <a
             href="#impressum"
-            class="text-[var(--color-orchidee-bg)] hover:underline"
+            class="hover:underline hover:text-[var(--color-orchidee)]"
             >Impressum</a
           >
           <a
             href="#datenschutz"
-            class="text-[var(--color-orchidee-bg)] hover:underline"
+            class="hover:underline hover:text-[var(--color-orchidee)]"
             >Datenschutz</a
           >
-          <a href="#agb" class="text-[var(--color-orchidee-bg)] hover:underline"
+          <a
+            href="#agb"
+            class="hover:underline hover:text-[var(--color-orchidee)]"
             >AGB</a
           >
         </div>
       </div>
     </footer>
+
     <script>
+      // Logic for Mobile Menu
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+
+      function toggleMenu() {
+        menu.classList.toggle('hidden');
+      }
+
+      btn.addEventListener('click', () => {
+        toggleMenu();
+      });
+
+      // Existing Image Modal Logic
       function openImage(src) {
         // 1. Create Overlay
         const overlay = document.createElement('div');
@@ -389,33 +472,35 @@
           left: '0',
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(0, 0, 0, 0.9)', // Deeper black for focus
+          backgroundColor: 'rgba(0, 0, 0, 0.9)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           zIndex: '10000',
           cursor: 'zoom-out',
-          opacity: '0', // Start invisible for fade-in
+          opacity: '0',
           transition: 'opacity 0.3s ease',
+          padding: '20px', // Added padding for mobile safety
         });
 
-        // 2. Create Image Container (adds a nice frame)
+        // 2. Create Image Container
         const fullImg = document.createElement('img');
         fullImg.src = src;
         Object.assign(fullImg.style, {
-          maxWidth: '90%',
+          maxWidth: '100%', // Changed to 100% for mobile
           maxHeight: '90%',
-          borderRadius: '8px', // Softer look
+          borderRadius: '8px',
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
-          transform: 'scale(0.9)', // Start slightly smaller for "pop" effect
-          transition: 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)', // Bouncy entrance
+          transform: 'scale(0.9)',
+          transition: 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
           cursor: 'default',
           border: '2px solid rgba(255, 255, 255, 0.1)',
+          objectFit: 'contain', // Ensures image doesn't stretch
         });
 
         // 3. Close Button
         const closeBtn = document.createElement('div');
-        closeBtn.innerHTML = '&times;';
+        closeBtn.innerHTML = '×';
         Object.assign(closeBtn.style, {
           position: 'absolute',
           top: '20px',
@@ -425,19 +510,25 @@
           fontWeight: '200',
           cursor: 'pointer',
           fontFamily: 'sans-serif',
+          zIndex: '10001', // Ensure it's above image
+          background: 'rgba(0,0,0,0.5)', // Background for visibility on light images
+          width: '40px',
+          height: '40px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderRadius: '50%',
         });
 
         overlay.appendChild(closeBtn);
         overlay.appendChild(fullImg);
         document.body.appendChild(overlay);
 
-        // Trigger Animations
         requestAnimationFrame(() => {
           overlay.style.opacity = '1';
           fullImg.style.transform = 'scale(1)';
         });
 
-        // 4. Close logic with Fade-out
         const closeModal = () => {
           overlay.style.opacity = '0';
           fullImg.style.transform = 'scale(0.9)';
@@ -445,10 +536,11 @@
             if (document.body.contains(overlay)) {
               document.body.removeChild(overlay);
             }
-          }, 300); // Match the transition time
+          }, 300);
         };
 
         overlay.onclick = closeModal;
+        closeBtn.onclick = closeModal; // Ensure clicking X works
         fullImg.onclick = (e) => e.stopPropagation();
       }
     </script>
