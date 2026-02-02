@@ -8,24 +8,449 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <nav class="bg-orchidee text-orchidee-bg shadow-lg">
-      <div class="max-w-7xl mx-auto px-4">
-        <div
-          class="flex justify-center items-center space-x-12 [&>*]:rounded-md [&>a]:hover:bg-green-800 [&>a]:text-xl [&>a]:font-medium"
-        >
-          <a href="#">Home</a>
-          <a href="#">Preis & Leistung</a>
-          <div class="flex item-center justify-center rounded-full">
-            <img
-              class="rounded-full h-24"
-              src="./images/logo-orchidee-thai-massage.png"
-              alt="Orchidee Thai Massage Logo"
-            />
+    <section id="home">
+      <div class="absolute w-full bg-[#ffffff0d] backdrop-blur-[6px] z-50">
+        <nav class="flex justify-center shadow-lg h-[72px]">
+          <div
+            class="flex justify-center items-center text-white space-x-12 [&>*>a]:text-xl"
+          >
+            <div class="navbarlink">
+              <a href="#about" class="">Über uns</a>
+            </div>
+            <div class="navbarlink">
+              <a href="#qualification" class="">Qualifikation & Kompetenz</a>
+            </div>
+            <div class="flex items-center justify-center rounded-full">
+              <img
+                class="translate-y-8"
+                src="./images/logo-orchidee-thai-massage.png"
+                alt="Orchidee Thai Massage Logo"
+                width="250"
+                height="72"
+              />
+            </div>
+            <div class="navbarlink">
+              <a href="#service">Unser Service</a>
+            </div>
+
+            <div class="navbarlink">
+              <a href="#contact" class="">Kontakt</a>
+            </div>
           </div>
-          <a href="#">Über uns</a>
-          <a href="#">Kontakt</a>
+        </nav>
+      </div>
+      <div class="landing-page-bg">
+        <img
+          class="w-full h-screen object-cover"
+          src="./images/massage.jpg"
+          alt="Massage Image"
+        />
+      </div>
+    </section>
+    <div
+      class="flex flex-col gap-32 px-6 py-20 bg-[var(--color-orchidee-bg)]/55"
+    >
+      <section id="about">
+        <div class="grid gap-10">
+          <h2
+            class="block text-9xl font-bold text-[var(--color-orchidee-text)] uppercase"
+          >
+            <span class="w-full"> Traditionelle<br /> </span>
+            <span class="w-full"> Thai<br /> </span>
+            <span class="flex w-full">
+              <span class=""> Massage </span>
+              <span class="text-2xl mt-4 ml-6"
+                >Harmonie für Körper und Geist
+              </span>
+            </span>
+          </h2>
+          <p
+            class="text-2xl text-[var(--color-orchidee-text)]/80 text-justify leading-9 my-4"
+          >
+            Unsere traditionelle Thai-Massage ist mehr als nur Entspannung - sie
+            ist eine tiefgreifende, ganzheitliche Behandlung, die Körper und
+            Geist wieder in Balance bringt. Mit gezieltem Druck, sanften
+            Dehnungen und fließenden Bewegungen werden Verspannungen gelöst,
+            Blockaden gelockert und die natürliche Energie im Körper aktiviert.
+            Diese Massageform verbessert die Durchblutung, fördert die
+            Beweglichkeit und wirkt nachhaltig gegen Stress und innere Unruhe.
+            Sie schenkt nicht nur körperliche Leichtigkeit, sondern auch mentale
+            Klarheit und tiefes Wohlbefinden.
+          </p>
+          <h4
+            class="font-bold text-center text-2xl text-[var(--color-orchidee-text)]"
+          >
+            Lernen Sie die wohltuende Wirkung selbst kennen – und schenken Sie
+            sich eine Auszeit, die bleibt.
+          </h4>
+        </div>
+      </section>
+      <section id="qualification">
+        <div class="flex justify-center items-center mb-12">
+          <h2
+            class="text-4xl font-bold text-[var(--color-orchidee-text)] text-center text-shadow-lg border-b-2 border-[var(--color-orchidee)]/30 pb-4 inline-block"
+          >
+            Qualifikation & Kompetenz
+          </h2>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-stretch max-w-6xl mx-auto"
+        >
+          <div
+            class="flex flex-col justify-between p-6 lg:p-8 rounded-3xl bg-[var(--color-orchidee-bg)]/10 border border-[var(--color-orchidee)]/10 backdrop-blur-md shadow-sm h-full"
+          >
+            <div
+              class="relative overflow-hidden rounded-2xl aspect-video w-full"
+            >
+              <img
+                onclick="openImage(this.src)"
+                class="w-full h-full object-cover transform transition-all duration-500 cursor-pointer hover:scale-[1.03] hover:shadow-xl"
+                src="./images/phap-front.png"
+                alt="Inhaberin vor dem Geschäft"
+              />
+            </div>
+            <div class="mt-8 text-center">
+              <h3
+                class="text-xl font-bold text-[var(--color-orchidee-text)] uppercase tracking-wide mb-2"
+              >
+                Ihre Gastgeberin
+              </h3>
+              <p class="text-lg font-medium text-[var(--color-orchidee-text)]">
+                Mrs. Suphap Kramer
+              </p>
+              <div
+                class="w-16 h-1 bg-[var(--color-orchidee)]/40 mx-auto my-4 rounded-full"
+              ></div>
+              <p class="text-base text-[var(--color-orchidee-text)]/90 italic">
+                "Herzlich willkommen zu Ihrer persönlichen Auszeit."
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between text-center p-6 lg:p-8 rounded-3xl bg-[var(--color-orchidee-bg)]/10 border border-[var(--color-orchidee)]/10 backdrop-blur-md shadow-sm h-full"
+          >
+            <div
+              class="relative overflow-hidden rounded-xl aspect-video w-full border-[6px] border-white/80 shadow-md"
+            >
+              <img
+                onclick="openImage(this.src)"
+                class="w-full h-full object-cover transform transition-all duration-500 hover:scale-[1.05] hover:rotate-1 cursor-pointer"
+                src="./images/phap-certificate.JPG"
+                alt="Zertifikat für traditionelle Thai Massage"
+              />
+            </div>
+            <div class="mt-8">
+              <h3
+                class="text-xl font-bold text-[var(--color-orchidee-text)] uppercase tracking-wide mb-2"
+              >
+                Offiziell Zertifiziert
+              </h3>
+              <p class="text-lg font-medium text-[var(--color-orchidee-text)]">
+                Ausbildung in traditioneller Thai-Massage
+              </p>
+              <div
+                class="w-16 h-1 bg-[var(--color-orchidee)]/40 mx-auto my-4 rounded-full"
+              ></div>
+              <p class="text-base text-[var(--color-orchidee-text)]/90 italic">
+                "Ihr Wohlbefinden liegt in geschulten, erfahrenen Händen."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="service">
+        <div class="flex justify-center items-center">
+          <h2
+            class="text-4xl font-bold text-[var(--color-orchidee-text)] text-shadow-lg border-b border-[var(--color-orchidee)]/50 mb-10 px-4 pb-3"
+          >
+            Unser Service
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-4 gap-6 mt-6">
+          <div class="priceCard">
+            <h4>Klassische Thai Ganzkörper Massage</h4>
+            <hr />
+            <div>
+              <div>
+                <div>
+                  <span class="numbers">120</span>
+                  <span>min</span>
+                </div>
+                <div class="space-border"></div>
+                <p class="numbers">95,-€</p>
+              </div>
+              <div>
+                <div>
+                  <span class="numbers">90</span>
+                  <span>min</span>
+                </div>
+                <div class="space-border"></div>
+                <p class="numbers">80,-€</p>
+              </div>
+              <div>
+                <div>
+                  <span class="numbers">60</span>
+                  <span>min</span>
+                </div>
+                <div class="space-border"></div>
+                <p class="numbers">50,-€</p>
+              </div>
+              <div>
+                <div>
+                  <span class="numbers">45</span>
+                  <span>min</span>
+                </div>
+                <div class="space-border"></div>
+                <p class="numbers">30,-€</p>
+              </div>
+            </div>
+          </div>
+          <div class="priceCard">
+            <h4>Öl Ganzkörper Massage</h4>
+            <hr />
+            <div>
+              <div>
+                <div>
+                  <span class="numbers">120</span>
+                  <span>min</span>
+                </div>
+                <div class="space-border mx-4"></div>
+                <p class="numbers">95,-€</p>
+              </div>
+              <div>
+                <div>
+                  <span class="numbers">90</span>
+                  <span>min</span>
+                </div>
+                <div class="space-border"></div>
+                <p class="numbers">80,-€</p>
+              </div>
+              <div>
+                <div>
+                  <span class="numbers">60</span>
+                  <span>min</span>
+                </div>
+                <div class="space-border"></div>
+                <p class="numbers">50,-€</p>
+              </div>
+              <div>
+                <div>
+                  <span class="numbers">45</span>
+                  <span>min</span>
+                </div>
+                <div class="space-border"></div>
+                <p class="numbers">30,-€</p>
+              </div>
+            </div>
+          </div>
+          <div class="priceCard">
+            <h4>Kräutertempel Ganzkörper Massage</h4>
+            <hr />
+            <div>
+              <div>
+                <div>
+                  <span class="numbers">120</span>
+                  <span>min</span>
+                </div>
+                <div class="space-border"></div>
+                <p class="numbers">105,-€</p>
+              </div>
+              <div>
+                <div>
+                  <span class="numbers">90</span>
+                  <span>min</span>
+                </div>
+                <div class="space-border"></div>
+                <p class="numbers">95,-€</p>
+              </div>
+              <div>
+                <div>
+                  <span class="numbers">60</span>
+                  <span>min</span>
+                </div>
+                <div class="space-border"></div>
+                <p class="numbers">65,-€</p>
+              </div>
+            </div>
+          </div>
+          <div class="priceCard">
+            <h4>Fußmassage</h4>
+            <hr />
+            <div>
+              <div>
+                <div>
+                  <span class="numbers">60</span>
+                  <span>min</span>
+                </div>
+                <div class="space-border"></div>
+                <p class="numbers">50,-€</p>
+              </div>
+              <div>
+                <div>
+                  <span class="numbers">45</span>
+                  <span>min</span>
+                </div>
+                <div class="space-border"></div>
+                <p class="numbers">30,-€</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="flex justify-center items-center">
+          <h2
+            class="text-4xl font-bold text-[var(--color-orchidee-text)] text-shadow-lg border-b border-[var(--color-orchidee)]/50 mb-10 px-4 pb-3"
+          >
+            Kontakt
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6 mt-6">
+          <div class="grid grid-rows-2 gap-6">
+            <div class="flex flex-col gap-4">
+              <h4 class="text-2xl text-[var(--color-orchidee-text)] font-bold">
+                Öffnungszeiten
+              </h4>
+              <div class="text-[var(--color-orchidee-text)]/100">
+                <p class="whitespace-nowrap">
+                  Montag - Freitag: <span class="numbers">09:00</span> -
+                  <span class="numbers">18:00</span> Uhr
+                </p>
+                <p class="whitespace-nowrap">
+                  Samstag: <span class="numbers">09:00</span> -
+                  <span class="numbers">16:00</span> Uhr
+                </p>
+                <p class="whitespace-nowrap">Sonntag: Geschlossen</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h4 class="text-2xl text-[var(--color-orchidee-text)] font-bold">
+                Kontakt
+              </h4>
+              <div class="text-[var(--color-orchidee-text)]/100">
+                <p class="numbers whitespace-nowrap">
+                  Telefon: +49 176 24763942
+                </p>
+                <p class="font-bold">
+                  Wir freuen uns auf Ihren Anruf zur Terminvereinbarung!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-6">
+            <h4 class="text-2xl text-[var(--color-orchidee-text)] font-bold">
+              Standort
+            </h4>
+            <div class="flex h-full">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2431.234567890123!2d11.6276234!3d52.1205334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b7c1234567890%3A0xabcdef1234567890!2sSimonstrasse+11,+39114+Magdeburg!5e0!3m2!1sen!2sde!4v1697041234567!5m2!1sen!2sde"
+                width="100%"
+                height="100%"
+                class="rounded-2xl shadow-lg"
+                allowfullscreen="true"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="text-center py-8 bg-[var(--color-orchidee-text)">
+      <div class="container mx-auto">
+        <div class="flex justify-center space-x-6 text-sm text-gray-600">
+          <a
+            href="#impressum"
+            class="text-[var(--color-orchidee-bg)] hover:underline"
+            >Impressum</a
+          >
+          <a
+            href="#datenschutz"
+            class="text-[var(--color-orchidee-bg)] hover:underline"
+            >Datenschutz</a
+          >
+          <a href="#agb" class="text-[var(--color-orchidee-bg)] hover:underline"
+            >AGB</a
+          >
         </div>
       </div>
-    </nav>
+    </footer>
+    <script>
+      function openImage(src) {
+        // 1. Create Overlay
+        const overlay = document.createElement('div');
+        Object.assign(overlay.style, {
+          position: 'fixed',
+          top: '0',
+          left: '0',
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(0, 0, 0, 0.9)', // Deeper black for focus
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: '10000',
+          cursor: 'zoom-out',
+          opacity: '0', // Start invisible for fade-in
+          transition: 'opacity 0.3s ease',
+        });
+
+        // 2. Create Image Container (adds a nice frame)
+        const fullImg = document.createElement('img');
+        fullImg.src = src;
+        Object.assign(fullImg.style, {
+          maxWidth: '90%',
+          maxHeight: '90%',
+          borderRadius: '8px', // Softer look
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+          transform: 'scale(0.9)', // Start slightly smaller for "pop" effect
+          transition: 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)', // Bouncy entrance
+          cursor: 'default',
+          border: '2px solid rgba(255, 255, 255, 0.1)',
+        });
+
+        // 3. Close Button
+        const closeBtn = document.createElement('div');
+        closeBtn.innerHTML = '&times;';
+        Object.assign(closeBtn.style, {
+          position: 'absolute',
+          top: '20px',
+          right: '30px',
+          color: 'white',
+          fontSize: '40px',
+          fontWeight: '200',
+          cursor: 'pointer',
+          fontFamily: 'sans-serif',
+        });
+
+        overlay.appendChild(closeBtn);
+        overlay.appendChild(fullImg);
+        document.body.appendChild(overlay);
+
+        // Trigger Animations
+        requestAnimationFrame(() => {
+          overlay.style.opacity = '1';
+          fullImg.style.transform = 'scale(1)';
+        });
+
+        // 4. Close logic with Fade-out
+        const closeModal = () => {
+          overlay.style.opacity = '0';
+          fullImg.style.transform = 'scale(0.9)';
+          setTimeout(() => {
+            if (document.body.contains(overlay)) {
+              document.body.removeChild(overlay);
+            }
+          }, 300); // Match the transition time
+        };
+
+        overlay.onclick = closeModal;
+        fullImg.onclick = (e) => e.stopPropagation();
+      }
+    </script>
   </body>
 </html>

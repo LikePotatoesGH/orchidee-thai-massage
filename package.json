@@ -1,13 +1,15 @@
 {
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "live-server": "^1.2.2",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "tailwindcss": "^4.1.4"
   },
   "scripts": {
     "format": "prettier --write \"**/*.{js,ts,json,css,md,html}\"",
-    "build:css": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "build:css": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "dev": "live-server --watch=src,*.html"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.4"

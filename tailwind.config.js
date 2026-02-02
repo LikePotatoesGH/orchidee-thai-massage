@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         orchideeColor: '#c99556',
         orchideeTextColor: '#1e5c3f',
-        backgroundLogoColor: '#f9f0df',
+        // backgroundLogoColor: '#f9f0df',
       },
     },
   },
