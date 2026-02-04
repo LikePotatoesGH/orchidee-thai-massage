@@ -1,2 +1,3 @@
-
+.gitignore
+backup-images/
 node_modules/
