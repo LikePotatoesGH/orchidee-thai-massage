@@ -3,9 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orchidee Thai Massage</title>
+    <title>Thai Massage Orchidee Magdeburg</title>
     <link href="./src/styles.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="./src/output.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="./images/icon-orchidee-thai-massage.png"
+      type="image/png"
+    />
   </head>
   <body>
     <section id="home">
@@ -104,33 +109,35 @@
     >
       <section id="about">
         <div class="grid gap-6 md:gap-10 max-w-7xl md:max-w-max mx-auto">
-          <h2
-            class="block text-5xl md:text-7xl lg:text-9xl font-bold text-[var(--color-orchidee-text)] uppercase leading-tight"
-          >
-            <span class="block w-full">Traditionelle</span>
-            <span class="block w-full">Thai</span>
-            <span class="flex flex-wrap w-full items-baseline">
-              <span>Massage</span>
-              <span
-                class="text-xl md:text-2xl mt-2 md:mt-4 ml-1 md:ml-6 block md:inline w-full md:w-auto font-medium normal-case tracking-normal"
-              >
-                Harmonie für Körper und Geist
+          <div class="xl:mx-20">
+            <h2
+              class="block text-5xl md:text-7xl lg:text-9xl font-bold text-[var(--color-orchidee-text)] uppercase leading-tight"
+            >
+              <span class="block w-full">Traditionelle</span>
+              <span class="block w-full">Thai</span>
+              <span class="flex flex-wrap w-full items-baseline">
+                <span>Massage</span>
+                <span
+                  class="text-xl md:text-2xl mt-2 md:mt-4 ml-1 md:ml-6 block md:inline w-full md:w-auto font-medium normal-case tracking-normal"
+                >
+                  Harmonie für Körper und Geist
+                </span>
               </span>
-            </span>
-          </h2>
-          <p
-            class="text-lg md:text-2xl text-[var(--color-orchidee-text)]/80 text-justify leading-relaxed md:leading-9 my-4"
-          >
-            Unsere traditionelle Thai-Massage ist mehr als nur Entspannung – sie
-            ist eine tiefgreifende, ganzheitliche Behandlung, die Körper und
-            Geist wieder in Balance bringt. Mit gezieltem Druck, sanften
-            Dehnungen und fließenden Bewegungen werden Verspannungen gelöst,
-            Blockaden gelockert und die natürliche Energie im Körper aktiviert.
-            Diese Massageform verbessert die Durchblutung, fördert die
-            Beweglichkeit und wirkt nachhaltig gegen Stress und innere Unruhe.
-            Sie schenkt nicht nur körperliche Leichtigkeit, sondern auch mentale
-            Klarheit und tiefes Wohlbefinden.
-          </p>
+            </h2>
+            <p
+              class="text-lg md:text-2xl text-[var(--color-orchidee-text)]/80 text-justify leading-relaxed md:leading-9 my-4"
+            >
+              Unsere traditionelle Thai-Massage ist mehr als nur Entspannung –
+              sie ist eine tiefgreifende, ganzheitliche Behandlung, die Körper
+              und Geist wieder in Balance bringt. Mit gezieltem Druck, sanften
+              Dehnungen und fließenden Bewegungen werden Verspannungen gelöst,
+              Blockaden gelockert und die natürliche Energie im Körper
+              aktiviert. Diese Massageform verbessert die Durchblutung, fördert
+              die Beweglichkeit und wirkt nachhaltig gegen Stress und innere
+              Unruhe. Sie schenkt nicht nur körperliche Leichtigkeit, sondern
+              auch mentale Klarheit und tiefes Wohlbefinden.
+            </p>
+          </div>
           <h4
             class="font-bold text-center text-lg md:text-2xl text-[var(--color-orchidee-text)] mt-4"
           >
@@ -436,7 +443,7 @@
           class="flex justify-center space-x-6 text-sm text-[var(--color-orchidee-text)]"
         >
           <a
-            href="#impressum"
+            href="/pages/impressum/index.html"
             class="hover:underline hover:text-[var(--color-orchidee)]"
             >Impressum</a
           >
@@ -444,11 +451,6 @@
             href="#datenschutz"
             class="hover:underline hover:text-[var(--color-orchidee)]"
             >Datenschutz</a
-          >
-          <a
-            href="#agb"
-            class="hover:underline hover:text-[var(--color-orchidee)]"
-            >AGB</a
           >
         </div>
       </div>
@@ -458,14 +460,6 @@
       // Logic for Mobile Menu
       const btn = document.getElementById('mobile-menu-btn');
       const menu = document.getElementById('mobile-menu');
-
-      function toggleMenu() {
-        menu.classList.toggle('hidden');
-      }
-
-      btn.addEventListener('click', () => {
-        toggleMenu();
-      });
 
       function openImage(src) {
         const overlay = document.createElement('div');
